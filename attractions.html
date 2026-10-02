@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Attractions</title>
+    <link rel="stylesheet" href="../stylesheets/master.css" />
+
+    <!-- Helper functions for loading banner and nav bar -->
+    <script src="./javascript/navigation.js"></script>
+
+    <script>
+        // Load banner and nav bar, then show main content
+        document.addEventListener('DOMContentLoaded', loadBannerAndNavBar);
+    </script>
+</head>
+
+<body>
+    <!-- Include banner (placeholder for javascript loaded fragment) -->
+    <header class="banner-container" id="banner-placeholder-id"></header>
+
+    <!-- Include navigation menu (placeholder for javascript loaded fragment) -->
+    <div class="nav-container" id="nav-placeholder-id"></div>
+
+    <!-- Content for this page. This content is left hidden until the banner and nav bar have loaded. -->
+    <section class="hidden-content-container content-container full-width" id="content-container-id">
+
+        <!-- MAIN CONTENT -->
+        <section class="main-content">
+
+            <article>
+                <!-- INTRO -->
+                <section>
+
+                    <h2>
+                        <h2>Entertainment</h2>
+                        <div>
+                            <p>Most people visit Taniti to enjoy the beaches, explore the
+                                rainforest, and visit the volcano. However, there are other things to do,
+                                including visiting a local history museum, going on chartered fishing
+                                tours, snorkeling, ziplining in the rainforest, visiting several pubs,
+                                including a microbrewery, dancing at a new dance club, seeing a movie,
+                                taking helicopter rides, playing at an arcade, visiting art galleries, and
+                                bowling. Also, a nine-hole golf course should be operational by next year.
+                                Many of these activities are in Merriton Landing, which is a rapidly
+                                developing area on the north side of Yellow Leaf Bay. </p>
+                        </div>
+                        <div class="image-collection">
+                            <figure class="photo-card" style="--rotation: -5deg">
+                                <img src="./images/attractions/festival.jpg" alt="Festival image">
+                                <figcaption>Island Festival</figcaption>
+                            </figure>
+                        </div>
+                        </div>
+                        <h2>Sightseeing</h2>
+                        <div>
+                            <p>Most tourists spend most of their time in Taniti City, which
+                                boasts native architecture and nearby white, sandy beaches that encircle
+                                Yellow Leaf Bay. </p>
+                        </div>
+                        <div class="image-collection">
+                            <figure class="photo-card" style="--rotation: 7deg">
+                                <img src="./images/attractions/festival2.jpg" alt="Beach scene image">
+                                <figcaption>Bay Views</figcaption>
+                            </figure>
+                        </div>
+                        <h2>Other Activities</h2>
+                        <div>
+                            <p>
+                            <ul>
+                                <li>boat or bus tours of the island</li>
+                                <li>hikes in the rainforest</li>
+                                <li>visits to Taniti’s active volcano.</li>
+                            </ul>
+                            </p>
+                            <div class="image-collection">
+                                <figure class="photo-card" style="--rotation: 7deg">
+                                    <img src="./images/attractions/Scuba_Diving.jpg" alt="Scuba diving image">
+                                    <figcaption>Water Adventure</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                </section>
+            </article>
+        </section>
+        <!-- SIDE CONTENT -->
+        <aside class="side-content">
+
+            <!-- HELPFUL TIPS -->
+            <section>
+                <h2>Helpful Tips</h2>
+                <ul class="list-content">
+                    <li>#1<sup>("")</sup>.</li>
+                    <li>#2<sup>("")</sup>.</li>
+                </ul>
+            </section>
+
+            <section>
+                <!-- HELPFUL LINKS -->
+                <hr class="horizontal-divider">
+
+                <h2>Helpful Links</h2>
+                <a href="https://website.com" target="_blank" rel="noopener noreferrer">link</a>
+            </section>
+        </aside>
+    </section>
+</body>
+
+</html>

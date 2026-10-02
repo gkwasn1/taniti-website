@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Food</title>
+    <link rel="stylesheet" href="../stylesheets/master.css" />
+
+    <!-- Helper functions for loading banner and nav bar -->
+    <script src="./javascript/navigation.js"></script>
+
+    <script>
+        // Load banner and nav bar, then show main content
+        document.addEventListener('DOMContentLoaded', loadBannerAndNavBar);
+    </script>
+</head>
+
+<body>
+    <!-- Include banner (placeholder for javascript loaded fragment) -->
+    <header class="banner-container" id="banner-placeholder-id"></header>
+
+    <!-- Include navigation menu (placeholder for javascript loaded fragment) -->
+    <div class="nav-container" id="nav-placeholder-id"></div>
+
+    <!-- Content for this page. This content is left hidden until the banner and nav bar have loaded. -->
+    <section class="hidden-content-container content-container full-width" id="content-container-id">
+
+        <!-- MAIN CONTENT -->
+        <section class="main-content">
+
+            <article>
+                <!-- INTRO -->
+                <section>
+
+                    <h2>
+                        <h2>Restaurants</h2>
+                        <div>
+                            <p>Taniti currently has 10 restaurants: five serve mostly local
+                                fish and rice, three serve American-style meals, and two serve Pan-Asian
+                                cuisine.</p>
+                                <br>
+                        </div>
+                        <div class="image-collection">
+                            <figure class="photo-card" style="--rotation: 7deg">
+                                <img src="./images/food/restaurant.jpg" alt="Tatini restaurant image">
+                                <figcaption>Local Dining</figcaption>
+                            </figure>
+                        </div>
+                        <h2>
+                            <h2>Grocery Stores</h2>
+                            <div>
+                                <p>Taniti has two supermarkets, two smaller grocery stores,
+                                    and one convenience store that is open 24 hours a day. </p>
+                                    <br>
+                            </div>
+                                                    <div class="image-collection">
+                            <figure class="photo-card" style="--rotation: -5deg">
+                                <img src="./images/food/market.jpg" alt="Tatini market image">
+                                <figcaption>Island Market</figcaption>
+                            </figure>
+                        </div>
+
+                </section>
+            </article>
+        </section>
+        <!-- SIDE CONTENT -->
+        <aside class="side-content">
+
+            <!-- HELPFUL TIPS -->
+            <section>
+                <h2>Helpful Tips</h2>
+                <ul class="list-content">
+                    <li>#1<sup>("")</sup>.</li>
+                    <li>#2<sup>("")</sup>.</li>
+                </ul>
+            </section>
+
+            <section>
+                <!-- HELPFUL LINKS -->
+                <hr class="horizontal-divider">
+
+                <h2>Helpful Links</h2>
+                <a href="https://website.com" target="_blank" rel="noopener noreferrer">link</a>
+            </section>
+        </aside>
+    </section>
+</body>
+
+</html>
