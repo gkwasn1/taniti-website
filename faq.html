@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title class="main-title">FAQs</title>
+    <link rel="stylesheet" href="../stylesheets/master.css" />
+
+    <!-- Helper functions for loading banner and nav bar -->
+    <script src="./javascript/navigation.js"></script>
+
+    <script>
+        // Load banner and nav bar, then show main content
+        document.addEventListener('DOMContentLoaded', loadBannerAndNavBar);
+    </script>
+</head>
+
+<body>
+    <!-- Include banner (placeholder for javascript loaded fragment) -->
+    <header class="banner-container" id="banner-placeholder-id"></header>
+
+    <!-- Include navigation menu (placeholder for javascript loaded fragment) -->
+    <div class="nav-container" id="nav-placeholder-id"></div>
+
+    <!-- Content for this page. This content is left hidden until the banner and nav bar have loaded. -->
+    <section class="hidden-content-container content-container full-width" id="content-container-id">
+        <section class="main-content">
+            <article>
+                <!-- INTRO -->
+                <section>
+                    <h2>Frequently Asked Questions</h2>
+
+                    <div class="faq-shell">
+                        <div class="faq-list">
+                            <div class="faq-item">
+                                <button class="faq-question" type="button" aria-expanded="false">
+                                    What kind of electrical outlets are used?
+                                </button>
+                                <div class="faq-answer" hidden>
+                                    <p>Power outlets are 120 volts (the same as in the United States).</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question" type="button" aria-expanded="false">
+                                    What hours is alcohol sold?
+                                </button>
+                                <div class="faq-answer" hidden>
+                                    <p>Alcohol is not allowed to be served or sold between the hours of midnight and 9:00 a.m.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question" type="button" aria-expanded="false">
+                                    What is the drinking age?
+                                </button>
+                                <div class="faq-answer" hidden>
+                                    <p>The drinking age on Taniti is 18, and it is not strictly enforced.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question" type="button" aria-expanded="false">
+                                    What language is spoken?
+                                </button>
+                                <div class="faq-answer" hidden>
+                                    <p>Many younger Tanitians speak fluent English. Very little English is spoken in rural areas, especially by older residents.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question" type="button" aria-expanded="false">
+                                    What medical facilities are available?
+                                </button>
+                                <div class="faq-answer" hidden>
+                                    <p>There is one hospital and several clinics. The hospital has many multilingual employees.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question" type="button" aria-expanded="false">
+                                    Is Taniti a safe place?
+                                </button>
+                                <div class="faq-answer" hidden>
+                                    <p>Violent crime is very rare in Taniti, but as tourism increases, there are more reports of pickpocketing and other petty crimes.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question" type="button" aria-expanded="false">
+                                    What holiday closures do I need to be aware of?
+                                </button>
+                                <div class="faq-answer" hidden>
+                                    <p>Taniti enjoys many national holidays, and many tourist attractions and restaurants will be closed on holidays, so visitors should plan accordingly.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question" type="button" aria-expanded="false">
+                                    What currency does Taniti use?
+                                </button>
+                                <div class="faq-answer" hidden>
+                                    <p>Taniti uses the U.S. dollar as its currency, but many businesses also accept euros and yen. Several banks facilitate currency exchange, and many businesses accept major credit cards.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </section>
+    </section>
+
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach((item) => {
+            const button = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+
+            button.setAttribute('aria-expanded', 'false');
+            answer.hidden = true;
+            item.classList.remove('open');
+
+            button.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+
+                faqItems.forEach((otherItem) => {
+                    otherItem.classList.remove('open');
+                    const otherButton = otherItem.querySelector('.faq-question');
+                    const otherAnswer = otherItem.querySelector('.faq-answer');
+                    otherButton.setAttribute('aria-expanded', 'false');
+                    otherAnswer.hidden = true;
+                });
+
+                if (!isOpen) {
+                    item.classList.add('open');
+                    button.setAttribute('aria-expanded', 'true');
+                    answer.hidden = false;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

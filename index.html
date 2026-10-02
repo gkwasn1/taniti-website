@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title class="main-title">Discover Taniti</title>
+    <link rel="stylesheet" href="../stylesheets/master.css" />
+
+    <!-- Helper functions for loading banner and nav bar -->
+    <script src="./javascript/navigation.js"></script>
+
+    <script>
+        // Load banner and nav bar, then show main content
+        document.addEventListener('DOMContentLoaded', loadBannerAndNavBar);
+    </script>
+</head>
+
+<body>
+    <!-- Include banner (placeholder for javascript loaded fragment) -->
+    <header class="banner-container" id="banner-placeholder-id"></header>
+
+    <!-- Include navigation menu (placeholder for javascript loaded fragment) -->
+    <div class="nav-container" id="nav-placeholder-id"></div>
+
+    <!-- Content for this page. This content is left hidden until the banner and nav bar have loaded. -->
+    <section class="hidden-content-container content-container full-width" id="content-container-id">
+        <section class="main-content">
+            <article>
+                <!-- INTRO -->
+                <section>
+                    <h2>About the Island of Taniti</h2>
+
+                    <p>Taniti is a small, tropical island in the Pacific. While the island has an area
+                        of less than 500 square miles, the terrain is varied and includes both sandy
+                        and rocky beaches, a small but safe harbor, lush tropical rainforests, and a
+                        mountainous interior that includes a small, active volcano. Taniti has an
+                        indigenous population of about 20,000. Until a recent increase in tourism,
+                        most of the Tanitian economy was dominated by fishing or agriculture.</p>
+                    <!-- two beach images arranged below the paragraph -->
+                     <div class="image-collection">
+                    <figure class="photo-card" style="--rotation: -5deg">
+                        <img src="./images/home/beach1.jpg" alt="Tatini beach image">
+                        <figcaption>Taniti Coastline</figcaption>
+                    </figure>
+                    <figure class="photo-card" style="--rotation: 7deg">
+                        <img src="./images/home/beach2.jpg" alt="Tatini beach image">
+                        <figcaption>Taniti Harbor</figcaption>
+                    </figure>
+                    </div>
+                </section>
+                <!-- SOURCES -->
+                <section>
+                </section>
+            </article>
+        </section>
+
+        <!-- SIDE CONTENT -->
+        <aside class="side-content">
+
+            <!-- HELPFUL TIPS -->
+            <section>
+                <h2>Helpful Tips</h2>
+                <ul class="list-content">
+                    <li>tip #1<sup>("reference")</sup>.</li>
+                    <li>tip #2<sup>("reference")</sup>.</li>
+                </ul>
+            </section>
+
+            <section>
+                <!-- HELPFUL LINKS -->
+                <hr class="horizontal-divider">
+
+                <h2>Helpful Links</h2>
+                <a href="https://website.com" target="_blank" rel="noopener noreferrer">link</a>
+            </section>
+        </aside>
+    </section>
+</body>
+
+</html>

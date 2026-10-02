@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>page name</title>
+    <link rel="stylesheet" href="../stylesheets/master.css" />
+
+    <!-- Helper functions for loading banner and nav bar -->
+    <script src="./javascript/navigation.js"></script>
+
+    <script>
+        // Load banner and nav bar, then show main content
+        document.addEventListener('DOMContentLoaded', loadBannerAndNavBar);
+    </script>
+</head>
+
+<body>
+    <!-- Include banner (placeholder for javascript loaded fragment) -->
+    <header class="banner-container" id="banner-placeholder-id"></header>
+
+    <!-- Include navigation menu (placeholder for javascript loaded fragment) -->
+    <div class="nav-container" id="nav-placeholder-id"></div>
+
+    <!-- Content for this page. This content is left hidden until the banner and nav bar have loaded. -->
+    <section class="hidden-content-container content-container full-width" id="content-container-id">
+
+        <!-- MAIN CONTENT -->
+        <section class="main-content">
+
+            <article>
+                <!-- INTRO -->
+                <section>
+
+                    <h2>Page heading</h2>
+                    <div>
+                        <p></p>
+                    </div>
+                </section>
+            </article>
+        </section>
+    </section>
+</body>
+
+</html>
