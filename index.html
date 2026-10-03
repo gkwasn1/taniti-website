@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <title class="main-title">Discover Taniti</title>
-<link rel="stylesheet" href="./stylesheets/master.css">
+    <link rel="stylesheet" href="./stylesheets/master.css">
 
     <!-- Helper functions for loading banner and nav bar -->
     <script src="./javascript/navigation.js"></script>
@@ -37,15 +37,15 @@
                         indigenous population of about 20,000. Until a recent increase in tourism,
                         most of the Tanitian economy was dominated by fishing or agriculture.</p>
                     <!-- two beach images arranged below the paragraph -->
-                     <div class="image-collection">
-                    <figure class="photo-card" style="--rotation: -5deg">
-                        <img src="./images/home/beach1.jpg" alt="Tatini beach image">
-                        <figcaption>Taniti Coastline</figcaption>
-                    </figure>
-                    <figure class="photo-card" style="--rotation: 7deg">
-                        <img src="./images/home/beach2.jpg" alt="Tatini beach image">
-                        <figcaption>Taniti Harbor</figcaption>
-                    </figure>
+                    <div class="image-collection">
+                        <figure class="photo-card" style="--rotation: -5deg">
+                            <img src="./images/home/beach1.jpg" alt="Tatini beach image">
+                            <figcaption>Taniti Coastline</figcaption>
+                        </figure>
+                        <figure class="photo-card" style="--rotation: 7deg">
+                            <img src="./images/home/beach2.jpg" alt="Tatini beach image">
+                            <figcaption>Taniti Harbor</figcaption>
+                        </figure>
                     </div>
                 </section>
                 <!-- SOURCES -->
@@ -76,14 +76,26 @@
         </aside>
     </section>
 
-    <footer class="citations-footer">
-        <p>
-            Images on this website are sourced from
-            <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.
-            These images have been released under the
-            <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener noreferrer">CC0 1.0 Universal Public Domain Dedication</a>
-            may be copied, modified, distributed, and used commercially without permission or attribution.
-        </p>
+    <footer>
+        <button type="button" onclick="document.getElementById('sources-dialog').showModal()">
+            Sources
+        </button>
+
+        <dialog id="sources-dialog">
+            <h2>Sources</h2>
+            <p>
+                Images on this website are sourced from
+                <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener noreferrer">Wikimedia
+                    Commons</a>.
+                These images have been released under the
+                <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank"
+                    rel="noopener noreferrer">CC0 1.0 Universal Public Domain Dedication</a>
+                may be copied, modified, distributed, and used commercially without permission or attribution.
+            </p>
+            <form method="dialog">
+                <button>Close</button>
+            </form>
+        </dialog>
     </footer>
 </body>
 
