@@ -26,14 +26,25 @@ function loadBannerAndNavBar() {
 
 // Make the button for the loaded page active
 function MarkActiveNavButton() {
-    const nav_button_elements = Array.from(document.querySelectorAll('.navigation .nav-button'));
-    const current_page_path = window.location.pathname;
-    nav_button_elements.some(button => {
-        if ((button.getAttribute('href') === current_page_path) || ((current_page_path === "/") && (button.getAttribute('href') === "/index.html"))) {
-            button.className = 'active-nav-button';
+    // Treat the site's directory URL as its index.html page.
+    const normalizePath = path =>
+        path.endsWith('/') ? `${path}index.html` : path;
 
-            // Return once a matching button is found.
-            return true;
+    const currentPath = normalizePath(window.location.pathname);
+
+    document.querySelectorAll('.navigation .nav-button').forEach(button => {
+        // Resolve the relative link against the containing page's URL.
+        const targetPath = normalizePath(
+            new URL(button.getAttribute('href'), document.baseURI).pathname
+        );
+
+        const isActive = targetPath === currentPath;
+        button.classList.toggle('active-nav-button', isActive);
+
+        if (isActive) {
+            button.setAttribute('aria-current', 'page');
+        } else {
+            button.removeAttribute('aria-current');
         }
     });
 }
